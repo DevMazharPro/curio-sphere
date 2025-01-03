@@ -18,6 +18,7 @@ export default async function BlogCard() {
       {data.map((item: typeCard) => (
         <Card
           className="w-full h-[420px] overflow-hidden flex flex-col"
+          key={item.slug.current}
         >
           <div className="w-full h-[200px] p-2">
             <Image
