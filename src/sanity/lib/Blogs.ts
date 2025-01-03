@@ -2,7 +2,7 @@ import { Verified } from "lucide-react";
 import { validation } from "sanity";
 import { defineType, defineField, defineArrayMember } from "sanity";
 
-export default {
+const blogSchema = {
   name: "blog",
   title: "Blog",
   type: "document",
@@ -11,7 +11,7 @@ export default {
       name: "title",
       title: "Title of the Blog",
       type: "string",
-      validation: (Rule:any) =>
+      validation: (Rule: any) =>
         Rule.required().max(80).error("Text must be at least 80 characters"),
     },
     {
@@ -58,7 +58,9 @@ export default {
       name: "publishedAt",
       title: "Published at",
       type: "datetime",
-      validation: (Rule:any) => Rule.required(),
+      validation: (Rule: any) => Rule.required(),
     },
   ],
 };
+
+export default blogSchema;

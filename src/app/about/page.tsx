@@ -9,7 +9,7 @@ export default function About() {
         <p className="text-xl">
           Welcome to{" "}
           <span className="font-bold text-buttonColor">CurioSphere</span>, a
-          space where curiosity meets knowledge! I'm{" "}
+          space where curiosity meets knowledge! Me{" "}
           <span className="font-bold text-buttonColor">Mazhar Hussain</span>,
           the mind behind this platform, dedicated to exploring fascinating
           topics across science, technology, history, and beyond. At
