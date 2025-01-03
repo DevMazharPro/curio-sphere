@@ -13,16 +13,16 @@ export default async function page({ params: { slug } }: { params: { slug: strin
   return (
     <div className="container mx-auto p-4 font-sans">
       <div className="text-primaryColor font-bold text-lg flex items-center gap-2 ">
-        <span className="text-black font-normal text-base flex items-center gap-2">
+        <span className="text-black dark:text-white font-normal text-base flex items-center gap-2">
           <MoveRight /> Blog By:
         </span>{" "}
         {data.author.name}
       </div>
       <article>
-        <h1 className="text-3xl font-bold text-buttonColor text-center mt-6 tracking-tighter">
+        <h1 className="text-xl md:text-3xl font-bold text-buttonColor text-center mt-3 md:mt-6 tracking-tighter">
           {data.title}
         </h1>
-        <div className="w-full h-[400px] mx-auto my-8">
+        <div className="w-full h-full md:h-[400px] mx-auto my-4 md:my-8">
           <Image
             src={data.mainImage}
             alt=""
@@ -33,7 +33,7 @@ export default async function page({ params: { slug } }: { params: { slug: strin
           />
         </div>
 
-        <div className='prose-headings:text-primaryColor prose-headings:font-bold prose-headings:text-xl prose-headings:py-2'>
+        <div className='prose-headings:text-primaryColor prose-headings:font-bold prose-headings:text-lg md:prose-headings:text-xl prose-headings:py-2'>
           <PortableText value={data.body}/>
         </div>
       </article>

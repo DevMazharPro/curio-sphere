@@ -9,11 +9,11 @@ export default function Header() {
   return (
     <nav className="flex justify-between items-center p-4 border-b">
       <Link href="/">
-        <div className="uppercase text-xl font-bold">
+        <div className="uppercase text-lg md:text-xl font-bold">
           Curio<span className="text-buttonColor">Sphere</span>
         </div>
       </Link>
-      <div>
+      <div className="hidden md:block">
         <ul className="flex space-x-4">
           <Link href={"/"}>
             {" "}

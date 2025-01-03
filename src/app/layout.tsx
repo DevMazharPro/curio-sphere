@@ -25,7 +25,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="px-48">
+          <div className="px-2 md:px-48">
             <Header />
             {children}
           </div>

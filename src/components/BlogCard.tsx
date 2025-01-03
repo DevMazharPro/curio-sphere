@@ -14,7 +14,7 @@ export default async function BlogCard() {
   const data = await client.fetch(query);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 md:mt-10">
       {data.map((item: typeCard) => (
         <Card
           className="w-full h-[420px] overflow-hidden flex flex-col"
