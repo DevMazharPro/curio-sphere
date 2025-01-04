@@ -6,7 +6,7 @@ import { client } from "@/sanity/lib/client";
 import { typeCard } from "@/app/Typing";
 
 export default async function BlogCard() {
-  const query = `*[_type == "blog"] | order(_createdAt asc){
+  const query = `*[_type == "blog"] | order(_updatedAt asc){
     author->{name,"authorImage": image.asset->url},
     description,"slug":slug.current,"mainImage":mainImage.asset->url,
     title,publishedAt
