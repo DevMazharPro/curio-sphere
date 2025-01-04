@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex flex-col md:w-1/3 mb-6 md:mb-0">
             <h2 className="text-2xl font-bold mb-4">CurioSphere</h2>
             <p className="text-sm mb-4">
-              Welcome to CurioSphere—where curiosity meets knowledge! I'm Mazhar
+              Welcome to CurioSphere—where curiosity meets knowledge! Me Mazhar
               Hussain, the mind behind this platform, dedicated to exploring
               science, technology, history, and more. Our mission is to deliver
               engaging, well-researched content that sparks curiosity and
