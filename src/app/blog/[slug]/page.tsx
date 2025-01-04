@@ -1,9 +1,11 @@
 import { typeBlog } from '@/app/Typing';
 import { client } from '@/sanity/lib/client';
-import { MoveRight } from 'lucide-react';
+import { ArrowLeftIcon, MoveRight, PanelLeftDashed } from 'lucide-react';
 import { PortableText } from 'next-sanity';
 import Image from 'next/image';
 import React from 'react'
+import Link from 'next/link';
+import { CommentSection } from '@/components/CommentWrap';
 
 export default async function page({ params: { slug } }: { params: { slug: string } }) {
   const query = `*[_type=='blog' && slug.current=="${slug}"]{title,body,"mainImage":mainImage.asset->url,"slug":slug.current,publishedAt,author->{name}}[0]`;
@@ -33,10 +35,21 @@ export default async function page({ params: { slug } }: { params: { slug: strin
           />
         </div>
 
-        <div className='prose-headings:text-primaryColor prose-headings:font-bold prose-headings:text-lg md:prose-headings:text-xl prose-headings:py-2'>
-          <PortableText value={data.body}/>
+        <div className="prose-headings:text-primaryColor prose-headings:font-bold prose-headings:text-lg md:prose-headings:text-xl prose-headings:py-2">
+          <PortableText value={data.body} />
         </div>
       </article>
+      <Link href="/">
+        <div className="flex items-center justify-end mt-4 text-xl font-bold text-primaryColor gap-2">
+          <div>
+            <ArrowLeftIcon />
+          </div>
+          <div>
+            <h2>Back to Homepage</h2>
+          </div>
+        </div>
+      </Link>  
+      <CommentSection />
     </div>
   );
 }
