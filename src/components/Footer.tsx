@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-gray-300 dark:border-gray-700 mt-8 pt-4 text-center">
           <p className="text-sm">
-            © {new Date().getFullYear()} Curipsphere. All rights reserved.
+            © {new Date().getFullYear()} Curiosphere. All rights reserved.
           </p>
         </div>
       </div>

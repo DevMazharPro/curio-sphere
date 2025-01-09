@@ -17,7 +17,7 @@ export default async function BlogCard() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 md:mt-10">
       {data.map((item: typeCard) => (
         <Card
-          className="w-full h-[420px] overflow-hidden flex flex-col"
+          className="w-full max-h-fit md:h-[420px] overflow-hidden flex flex-col"
           key={item.slug.current}
         >
           <div className="w-full h-[200px] p-2">
@@ -30,34 +30,34 @@ export default async function BlogCard() {
               className="w-full h-full object-cover"
             />
           </div>
-          <CardContent className="flex flex-col flex-grow p-4 justify-between">
-            <div>
-              <h2 className="text-xl font-bold text-primaryColor">
-                {item.title}
-              </h2>
-              <p className="text-gray-500 text-sm line-clamp-3">
-                {item.description.length > 100
-                  ? item.description.substring(0, 100) + "..."
-                  : item.description}
-              </p>
-              <Link
-                href={`/blog/${item.slug}`}
-                className="text-buttonColor mt-2 underline block"
-              >
-                Read More
-              </Link>
-            </div>
-            <div className="flex justify-between items-center mt-4">
-              <p className="text-gray-400 text-sm">{item.author.name}</p>
-              <Image
-                src={item.author.authorImage}
-                alt="author image"
-                width={30}
-                height={30}
-                className="rounded-full object-cover"
-              />
-            </div>
-          </CardContent>
+          <Link
+            href={`/blog/${item.slug}`}
+            className="text-buttonColor"
+          >
+            <CardContent className="flex flex-col flex-grow p-2 justify-between">
+              <div>
+                <h2 className="md:text-xl text-lg font-bold text-primaryColor">
+                  {item.title}
+                </h2>
+                <p className="text-gray-500 text-sm line-clamp-3">
+                  {item.description.length > 100
+                    ? item.description.substring(0, 100) + "..."
+                    : item.description}
+                </p>
+                <p className="mt-2 underline">Read More</p>
+              </div>
+              <div className="flex justify-between items-center mt-4">
+                <Image
+                  src={item.author.authorImage}
+                  alt="author image"
+                  width={24}
+                  height={24}
+                  className="rounded-[50%] object-cover"
+                  />
+                <p className="text-gray-400 text-sm">{item.author.name}</p>
+              </div>
+            </CardContent>
+          </Link>
         </Card>
       ))}
     </div>
