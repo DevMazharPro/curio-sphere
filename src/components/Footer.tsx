@@ -23,13 +23,13 @@ const Footer = () => {
                 <Instagram size={20} />
               </Link>
               <Link
-                href="https://www.linkedin.com/in/aliyan-aftab-b95b962b4/"
+                href="https://www.linkedin.com/in/mazhar-hussain-979412252"
                 className="text-white  dark:text-gray-300 hover:text-buttonColor dark:hover:text-buttonColor"
               >
                 <Linkedin size={20} />
               </Link>
               <Link
-                href="https://github.com/AliyanAftab0"
+                href="https://github.com/DevMazharPro"
                 className="text-white  dark:text-gray-300 hover:text-buttonColor dark:hover:text-buttonColor"
               >
                 <Github size={20} />

@@ -21,18 +21,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="font-sans">
-      <Head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3125423992216738"
-          crossOrigin="anonymous"
-        ></script>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3125423992216738"
-          crossOrigin="anonymous"
-        ></script>
-      </Head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
