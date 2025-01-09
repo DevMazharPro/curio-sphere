@@ -8,6 +8,7 @@ export interface typeCard {
   body: string;
   mainImage: any;
   publishedAt: any;
+  _id: any;
 }
 
 export interface typeBlog {
@@ -17,5 +18,8 @@ export interface typeBlog {
   slug: Slug;
   body: any;
   mainImage: any;
-    publishedAt: any;
+  publishedAt: any;
+  _id: any;
+  name: string,
+  comments: any,
 }
