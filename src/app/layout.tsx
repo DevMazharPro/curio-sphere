@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import { ThemeProvider } from "../components/components/theme-provider";
 import Footer from "@/components/Footer";
 import Head from "next/head";
+import AdSense from "@/components/Adsense";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="font-sans">
+      <Head>
+        <AdSense pId="ca-pub-3125423992216738" />
+      </Head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
